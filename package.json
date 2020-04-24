@@ -1,0 +1,23 @@
+{
+  "name": "mrworldwide",
+  "version": "1.0.0",
+  "description": "Discord bot that allows all users to toggle the voice region in case of outages",
+  "main": "bot.js",
+  "scripts": {
+    "invite": "node invite.js",
+    "start": "node bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukemoll/mrworldwide.git"
+  },
+  "author": "Luke Moll",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/lukemoll/mrworldwide/issues"
+  },
+  "homepage": "https://github.com/lukemoll/mrworldwide#readme",
+  "dependencies": {
+    "discord.js": "^12.2.0"
+  }
+}
