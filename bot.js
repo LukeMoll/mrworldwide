@@ -8,7 +8,6 @@ client.on('ready', () => {
 client.on('message', (mes) => {
     if(mes.content.toLowerCase() == "!region") {
         try {
-            mes.guild.getRe
             mes.guild.fetchVoiceRegions().then(regions => {
                 let otherRegion = regions
                     .map(reg => reg.id)
@@ -33,3 +32,16 @@ client.on('message', (mes) => {
 });
 
 client.login(require('./keys').token);
+
+if (process.env.HTTP_PORT !== undefined)
+{
+    const http = require('http');
+
+    const http_port = process.env.HTTP_PORT;
+    console.log(`Starting HTTP server on ${http_port}.`);
+
+    http.createServer((req, res) => {
+        res.writeHead(204);
+        res.end();
+    }).listen(http_port, "0.0.0.0");
+}

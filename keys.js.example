@@ -1,8 +1,0 @@
-/*
- * If you don't know what to put in these fields, look at README.md
- */
-
-module.exports = {
-    token: "Bot token here",
-    clientid: "Client ID here",
-};
